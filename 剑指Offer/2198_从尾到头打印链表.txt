@@ -1,0 +1,18 @@
+reversePrint1:
+利用栈
+时间复杂度：O(N)   需要遍历完链表
+空间复杂度：O(N)   定义res存放链表元素
+
+倒序输出：res.reverse() or res[::-1]
+
+reversePrint2:
+递归法
+时间复杂度：O(N)
+空间复杂度：O(N)   系统隐式的维护了一个栈
+思想：递归值的返回是逆序的，从最内层开始返回
+
+终止条件：
+if not head:  return []
+
+递归操作：
+return self.reversePrint2(head.next)+[head.val]

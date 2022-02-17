@@ -1,0 +1,24 @@
+minAarry1:
+倒序枚举！
+时间复杂度:O(N)
+空间复杂度：O(1)
+思路：
+当num[i]-num[i-1]<0时,return num[i]
+
+minAarry2:
+二分查找法！
+时间复杂度:O(log2N)
+空间复杂度:O(1)
+性质：左有序列表中的任意一个元素>右有序列表中的所有元素
+目的：i逼近左列的最后一个元素,j逼近右列的第一个元素
+mid = (i + j) // 2
+if num[mid]>num[j]:
+# 此时num[mid]在左列表中,执行 i = mid + 1
+
+if num[mid]<num[j]:
+# 此时num[mid]在右列表中,执行 j = mid (为什么不是mid-1:num[mid]，可能是右列的最后一个元素)
+
+if num[mid] == num[j]:
+# 此时无法确定num[mid]属于那个列表,执行 j = j-1
+
+直到 i==j 时：return num[i]

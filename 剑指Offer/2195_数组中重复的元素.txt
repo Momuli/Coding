@@ -1,0 +1,26 @@
+findRepeatNumber1：
+哈希表法：
+时间复杂度：O(N)
+空间复杂度：O(N)
+1.创建空的set()
+2.遍历列表元素：
+若不在set中：则添加到set中  set.add()
+若在列表中：说明为重复元素，直接return 该元素
+否则：return -1
+
+findRepeatNumber2：
+原地交换法：
+时间复杂度:O(N)
+空间复杂度：O(1)
+题目已知：长度为n的列表中，元素的取值范围为1~n-1,说明下标与元素值为一对多的关系，则以下标为哈希
+索引，使索引值=索引。
+算法思路：
+1.初始化下标：i = 0
+2. if num[i]==i:    此时索引值==索引,跳过
+       i+=1
+3.当索引值不等于索引时：
+此时判断该索引值是否重复出现，即：if nums[i] == nums[nums[i]]:
+                                此nums[i]重复出现，return nums[i]
+4.以上两种情况都不满足时：即num[i]!=i and nums[i]值是第一次出现，则需要交换，
+将该nums[i]交换到与它相等的索引处：
+nums[nums[i]], nums[i] = nums[i], nums[nums[i]]

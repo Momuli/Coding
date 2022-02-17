@@ -1,0 +1,9 @@
+replaceSpace1:
+库函数：
+str.replace(str1,str2,num):将str中的str1替换为str2,若指定num,则替换不超过num次
+
+replaceSpace1:
+遍历法：
+1.s不能直接修改，先将s转换为列表l
+2.遍历列表l，修改对应元素
+3.将列表l转换为字符串：'连接符'.join(l)   (这里连接符为'')

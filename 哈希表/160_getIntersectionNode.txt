@@ -1,0 +1,22 @@
+ getIntersectionNode1：
+ Hash表记录法
+ 1.遍历headA,将headA中的每个元素记录到hash_l中
+ 2.遍历headB:
+ 如果headB中的元素存在于hash_l：return headB
+ 若遍历完headB,headB中的元素不存在与hash_l, return None
+
+ getIntersectionNode2:
+ 双指针法:
+ len(headA)=a+c=m
+ len(headB)=b+c=n
+ if m=n: a=b
+ if m!=n: a+c+b=b+c+a
+ 因此,pa最终一定会和pb汇合：
+ if pa=pb!=None:相交
+ if pa=pb==None:不相交
+
+ pa=headA
+ pb=headB
+while pa != pb:
+pa = pa.next if pa else headB
+pb = pb.next if pa else headA

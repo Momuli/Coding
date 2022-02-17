@@ -1,0 +1,21 @@
+hasCycle1:
+快慢指针法：
+快指针移动步幅：2
+慢指针移动步幅：1
+
+1.当链表为空或只有一个元素时：返回False
+2.当链表中的元素数>=2时，可能存在环：
+此时：
+slow=head
+fast=head.next
+如果slow!=fast:
+当fast为空 or fast.next为空时：return False
+否则：
+fast = fast.next.next
+slow = slow.next
+
+hasCycle2:
+枚举法
+将每一个遍历过的元素放入hash表
+当head.next在hash表中存在时：有环
+

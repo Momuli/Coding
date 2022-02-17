@@ -1,0 +1,11 @@
+containsDuplicate1:
+哈希表法
+1.遍历nums：
+若nums[i] 不存在于 hash_l: 则添加到hash_l
+若nums[i] 存在于 hash_l: return True
+
+
+containsDuplicate1:
+set():集合中不存在重复元素
+将列表nums转化为set:set(nums)
+判断列表nums与集合set的长度是否相等

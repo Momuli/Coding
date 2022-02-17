@@ -1,0 +1,20 @@
+containsNearbyDuplicate1:
+哈希字典：
+1.若值不在dict中:给dict添加{key:value}
+2.若值在dict中：
+判断下标差是否<=k:
+是：return True
+否：更新下标
+
+containsNearbyDuplicate2:
+哈希列表：
+列表的长度固定为k
+遍历nums:
+if nums[i] 不在 list中：
+判断list的长度是否<k:
+是：添加nums[i]
+否：添加nums[i]并del list[0]
+
+if nums[i] 在 list中：
+return True
+

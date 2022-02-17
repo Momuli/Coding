@@ -1,0 +1,19 @@
+solveNQueens:
+主函数
+1.定义track以及res
+2.调用回溯函数Nqueen(0, track, res)  # 从第0行开始处理
+3.return res
+
+Nqueen:
+回溯递归函数
+1.base case处理：len(track) == row
+即所有行都放上了皇后
+2.选择列表：即每一行的n个列
+3.遍历选择列表：
+//不能放情况处理  调用valid()
+//做选择：给当前行的第i列放上皇后
+//调用递归函数Nqueen处理第row+1行：Nqueen(row+1, track, res)
+//撤销当前行的选择
+
+valid:
+处理左上，右上，整列不能放的情况

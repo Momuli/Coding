@@ -1,0 +1,17 @@
+minCostClimbingStairs1:
+待改进；动态规划1：
+dp[i]=j:表示第i个阶梯的前一个阶梯是第j个阶梯
+逆序遍历cost建立dp表:
+dp[0]=0
+dp[1]=0
+dp[i] = i-1 if cost[i-1] < cost[i-2]
+      = i-2 if cost[i-2] <= cost[i-1]
+
+minCostClimbingStairs2:
+动态规划法2：
+dp[i]:到达第i个阶梯,需要的花费
+状态转移方程：
+dp[0]=0
+dp[1]=0
+dp[i] = min(dp[i-1]+cost[i-1], dp[i-2]+cost[i-2])
+

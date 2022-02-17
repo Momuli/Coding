@@ -1,0 +1,30 @@
+coinChange1：
+自底向上的迭代
+1.初始化dp[]数组为一组极大值   dp = [amount+1] * (amount+1)
+2.base case: dp[0] = 0
+3.根据状态转移方程，构建循换体
+dp[0] = 0
+dp[n] = -1 if n < 0
+dp[n] = min(dp[n], dp[n-item]+1)   item属于coins
+4.输出 dp[amount]
+
+coinChange2：
+自顶向下的暴力递归法(存在子问题的重复计算)
+1.首先判断base case:
+if amount == 0: return 0
+if amount < 0: return -1
+2.递归计算子问题的解：
+sub_sel = coinChange2(coins, amount-coin)
+3. 选择
+res = min(res, sub_sel+1)
+4.判断
+if res == amount+1: return -1
+else:
+return res
+
+coinChange3：
+带备忘录的递归算法
+1.定义全局数组变量memo
+2.每次递归计算amount-item时,先查看是否已经计算过,若计算过直接返回
+3.将新计算的amount-item 存入memo
+4.返回memo[amount]

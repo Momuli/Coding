@@ -1,0 +1,13 @@
+isPalindrome12:
+将数字->字符串,然后字符串反转比较
+
+isPalindrome3：
+字符串只反转一半：
+s[:mid] == s[-1:-mid-1:-1]
+
+isPalindrome4:
+只对比数字的一半
+12321=>123     1221=>12
+while r_num < x:
+r_num = r_num * 10 + num % 10
+num = num // 10

@@ -1,0 +1,6 @@
+isUgly:
+递归法
+1.n<=0:一定不是丑数 return False
+2.n==1:return True
+3.将n不断的用[2,3,5]整除：
+若不能整除：return False

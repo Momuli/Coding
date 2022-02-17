@@ -1,0 +1,8 @@
+isPowerOfTwo:
+递归法：
+终止条件：
+n == 0: False
+n == 1: True
+n % 2 == 1: False
+else:
+Solution().isPowerOfTwo(n // 2)

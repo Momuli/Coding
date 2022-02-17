@@ -1,0 +1,46 @@
+inorderTraversal1:
+递归法：
+时间复杂度：O(N)
+空间复杂度：O(N)
+1.终止条件：
+if not root:
+return []
+2.递归调用：
+res.extend(func(root.left))
+res.ectend([root.val])
+res.extend(func(root.right))
+
+inorderTraversal2:
+迭代法：
+时间复杂度：O(N)
+空间复杂度：O(1)
+1.定义压栈函数：
+将root以及root的左子树的值依次压入栈中
+2.定义stack = []  res = []
+3.出栈：
+将当前栈顶元素放入结果列表中，在利用压栈函数将栈顶元素的右子树元素压入栈中
+
+inorderTraversal3:
+Morris法:
+时间复杂度：O(N)   (每个节点访问两遍)
+空间复杂度：O(1)
+
+算法思想：在中序遍历中，当前节点x的前驱结点pre的右孩子一定是空的。将当前节点x赋值给pre.right,
+在下一次访问中，如果pre.right不为空，则pre.right一定指向x,表明当前节点x是第二次被访问，x的
+左子树已经访问结束，因而不用再维护栈
+
+流程：
+当root不为空时：
+    root.left若为空：
+        pop(root); root = root.right
+    root.left不为空：
+        寻找root的前驱节点pre(root向左走一步后一直向右走)
+        while (pre.right != None and pre.right != root): pre = pre.right
+        pre.right为空：(此时root第一次被访问，需要先遍历root的左子树）
+            pre.right = root
+            root = root.left
+        pre.right不为空：(此时root第二次访问，root的左子树已经遍历完成，输出root值，pre.right置空，
+        开始访问root的右子树)
+            pop(root)
+            pre.right = None
+            root = root.right

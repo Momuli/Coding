@@ -1,0 +1,18 @@
+openLock:
+广度优先搜索法
+时间复杂度:O(N)
+空间复杂度:O(N)
+1.queue = ['0000']  # 队列中添加初始状态
+2.visited['0000']+deadends  # 已经生成过的状态
+3.step = 0
+
+while queue:
+    l = len(queue)
+    for _ in range(l):
+        # 判断当前节点是否是target:   return
+        # 判断当前节点是否在死亡列表中: continue
+        // 对当前节点扩展:上旋 以及 下旋
+           判断新生成的状态是否在visited中
+           将不在visited中的节点加入queue
+    step += 1  # 一层已经判断完毕，再加1
+    return -1

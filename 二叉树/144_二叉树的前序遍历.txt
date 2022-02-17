@@ -1,0 +1,4 @@
+preorderTraversal:
+递归
+思路：中左右
+root.val+左子树前序遍历的结果+右子树前序遍历的结果

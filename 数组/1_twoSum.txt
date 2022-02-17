@@ -1,0 +1,13 @@
+twoSum1:
+传统枚举方法！
+类似于冒泡算法：
+总共比较n-1轮，第i轮比较n-i次
+耗时省空间
+时间复杂度：O(n^2)
+
+twoSum2:
+只循换一次！
+在每次循换时:
+针对nums[i]利用列表diff_dict[]的第i个位置记录nums[i]与target的差值(相当于哈希表）
+对于nums[j]：
+如果nums[j]的值在diff_dict[]中，则返回[i,j](利用list.index()方法)

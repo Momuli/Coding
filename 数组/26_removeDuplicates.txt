@@ -1,0 +1,14 @@
+removeDuplicates1:
+枚举法，实现了删除操作！
+1.因为在nums[i]==nums[j]时执行了del操作，数组长度在循环过程中时不断变化的，因此用了while循换。
+2.j在循换过程中不断后移，只要nums[i]!=nums[j],则推出j循换，执行i+1
+n个元素需要比较 <=n-1 轮
+
+
+removeDuplicates2:
+快慢指针！
+1.初始时：fast=slow+1
+2.fast指针不断后移，知道nums[fast]!= nums[slow]
+3.此时slow+1,将新出现的元素存入nums[slow+1]
+4.当fast指针走完整个nums，那么slow+1就是不同元素的个数(slow是下标，所以要+1)
+

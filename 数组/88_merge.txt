@@ -1,0 +1,10 @@
+merge1:
+1.从头开始比较，需要额外的存储空间num3
+2.将num1[i]和nums2[j]中的较大存入nums3,i++orj++
+3.终止条件：i<m or j<n
+
+merge2:
+1.从尾端开始比较
+2.i,j指向nums1和nums2的尾端
+3.将两者中较大者存入num1[m+n-1]处，并且i-- or j--
+4.终止条件：i<0 or j<0

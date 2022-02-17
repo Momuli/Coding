@@ -1,0 +1,6 @@
+longestCommonPrefix:
+先验：'abcd'的前缀：a ab abc abcd
+     'abcd'的都坠：d cd bcd abcd
+1.以字符串数组中最短的字符串作为哨兵：
+2.从哨兵的第一个字符开始，与列表中每个字符串的对应字符作比较
+3.以flag作为判断标准，当flag=false时结束

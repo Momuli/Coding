@@ -1,0 +1,11 @@
+isPalindrome1:
+设置收尾指针
+设置标志位flag
+1.从两头开始向中间比较,如果两者不相等，flag=false
+2.终止条件：首指针<尾指针
+
+isPalindrome2:
+利用ASCII码计算
+设置标志位flag
+1.将原字符串分成两个子串
+2.对应位置(s1:首~尾, s2:尾~首）相减，如果差值不等于0，flag=false

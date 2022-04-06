@@ -10,6 +10,7 @@
 4. 链表合并时:
 * `if not l1: return l2`
 * `if not l2: return l1`
+
 **代码:**
 ```
     def mergeKLists1(self, lists):

@@ -20,6 +20,7 @@ class Solution:
         if x <= 0:
             return 0
         ori = x
+        # ori = x / ori 时：ori ** 2 = x 需要退出
         while ori > x / ori:
             ori = (ori + x / ori) / 2
         return ori
